@@ -30,4 +30,4 @@ y_all <- y_all_labels$V2
 # with the average of each variable for each activity and each subject.
 aggregated <- aggregate(X_all, by=list('activity' = y_all), mean)
 
-write.csv(aggregated, 'aggregated.csv', row.names = FALSE, quote = FALSE)
+write.table(aggregated, 'aggregated.txt', row.names = FALSE, quote = FALSE)
